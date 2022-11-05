@@ -64,13 +64,18 @@ int print_integer(va_list arg)
 	int number = 0;
 
 	number = va_arg(arg, int);
-	/*number_of_digits = (int)(log10(abs(number)) + 1);*/
-	number_of_digits = 4;
-	
+	number_of_digits = 0;
+
 	if (number < 0)
 	{
 		_putchar('-');
 		number *= -1;
+	}
+
+	while (number > 9)
+	{
+		number = number / 10;
+		number_of_digits++;
 	}
 
 	print_digit_by_digit(number);
