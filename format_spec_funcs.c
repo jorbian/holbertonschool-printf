@@ -64,7 +64,7 @@ int print_integer(va_list arg)
 	int number = 0;
 
 	number = va_arg(arg, int);
-	number_of_digits = (int)(log10(abs(number)) + 1);
+	/*number_of_digits = (int)(log10(abs(number)) + 1);*/
 
 	if (number < 0)
 	{
