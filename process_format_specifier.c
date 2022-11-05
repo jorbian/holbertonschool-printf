@@ -24,7 +24,8 @@ int process_format_specifier(const char token, va_list arg)
 	{
 		if (format_specifier[place_in_table].token == token)
 		{
-			which_function = which_function + format_specifier[place_in_table].function(arg);
+			which_function = which_function +
+			format_specifier[place_in_table].function(arg);
 			return (which_function);
 		}
 		place_in_table++;

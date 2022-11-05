@@ -2,7 +2,7 @@
 
 /**
 * print_character - function that print a character
-* @args: asdf asdf asdf
+* @arg: asdf asdf asdf
 * Return: 1
 */
 int print_character(va_list arg)
@@ -19,7 +19,7 @@ int print_character(va_list arg)
 
 /**
 * print_string - function to print a string
-* @args: asdf asdf asdf
+* @arg: asdf asdf asdf
 * Return: length of the string that was printed
 */
 int print_string(va_list arg)
@@ -42,12 +42,12 @@ int print_string(va_list arg)
 
 /**
  * print_percent_sign - exactly what it says on the tin
- * @args: the argument
+ * @arg: the argument
  * Return: 1
  */
-int print_percent_sign(va_list args)
+int print_percent_sign(va_list arg)
 {
-	(void)args;
+	(void)arg;
 
 	_putchar('%');
 	return (1);
@@ -55,15 +55,15 @@ int print_percent_sign(va_list args)
 
 /**
 * print_integer - function that print a decimal or an integr number
-* @args: asdf asdf asdf
+* @arg: asdf asdf asdf
 * Return: length of the string that was printed
 */
-int print_integer(va_list args)
+int print_integer(va_list arg)
 {
 	int number_of_digits;
 	int number = 0;
 
-	number = va_arg(args, int);
+	number = va_arg(arg, int);
 	number_of_digits = (int)(log10(abs(number)) + 1);
 
 	if (number < 0)
