@@ -65,7 +65,8 @@ int print_integer(va_list arg)
 
 	number = va_arg(arg, int);
 	/*number_of_digits = (int)(log10(abs(number)) + 1);*/
-
+	number_of_digits = 4;
+	
 	if (number < 0)
 	{
 		_putchar('-');
